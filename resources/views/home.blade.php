@@ -6,13 +6,13 @@
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="{{ asset('storage/sliders/images.jpg') }}" class="d-block w-100 rounded" alt="Slider 1">
+                <img src="{{ Vite::asset('resources/images/sliders/images.jpg') }}" class="d-block w-100 rounded" alt="Slider 1">
             </div>
             <div class="carousel-item">
-                <img src="{{ asset('storage/sliders/road220058.jpg') }}" class="d-block w-100 rounded" alt="Slider 2">
+                <img src="{{ Vite::asset('resources/images/sliders/road220058.jpg') }}" class="d-block w-100 rounded" alt="Slider 2">
             </div>
             <div class="carousel-item">
-                <img src="{{ asset('storage/sliders/images.jpg') }}" class="d-block w-100 rounded" alt="Slider 3">
+                <img src="{{ Vite::asset('resources/images/sliders/images.jpg') }}" class="d-block w-100 rounded" alt="Slider 3">
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
@@ -34,7 +34,7 @@
                     @if ($profile->photo_path)
                         <img src="{{ Storage::url($profile->photo_path) }}" class="card-img-top rounded" alt="{{ $profile->name }}">
                     @else
-                        <img src="{{ asset('storage/profile_photos/placeholder.png') }}" class="card-img-top rounded" alt="Default Profile">
+                        <img src="{{ Vite::asset('resources/images/profile_photo/placeholder.png') }}" class="card-img-top rounded" alt="Default Profile">
                     @endif
                     <div class="card-body">
                         <h5 class="card-title">{{ $profile->name }}</h5>
